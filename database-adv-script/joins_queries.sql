@@ -10,9 +10,7 @@ SELECT
 FROM 
     Booking b
 INNER JOIN 
-    User u ON b.user_id = u.user_id;
-
-SELECT
+    User u ON b.user_id = u.user_id;SELECT 
     p.property_id,
     p.name AS property_name,
     p.location,
@@ -21,7 +19,11 @@ SELECT
     r.rating,
     r.comment,
     r.created_at AS review_date
-FROM
+FROM 
     Property p
-LEFT JOIN
-    Review r ON p.property_id = r.property_id;
+LEFT JOIN 
+    Review r ON p.property_id = r.property_id
+ORDER BY 
+    r.rating DESC, 
+    p.name ASC;
+
