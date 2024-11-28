@@ -14,3 +14,7 @@
 . Must satisfy 2NF
 
 . Eliminate transitive dependencies: non-key attributes must depend only on the primary key
+
+## user table
+
+.user(user_id, first_name, email) the table satify third normal form
