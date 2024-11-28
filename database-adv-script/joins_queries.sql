@@ -27,3 +27,19 @@ ORDER BY
     r.rating DESC, 
     p.name ASC;
 
+
+SELECT
+    u.user_id AS user_id,
+    CONCAT(u.first_name, ' ', u.last_name) AS user_name,
+    u.email AS user_email,
+    b.booking_id AS booking_id,
+    b.property_id,
+    b.start_date,
+    b.end_date,
+    b.total_price,
+    b.status
+FROM
+    User u
+FULL OUTER JOIN
+    Booking b ON u.user_id = b.user_id;
+
