@@ -18,3 +18,21 @@
 ## user table
 
 .user(user_id, first_name, email) the table satify third normal form
+
+## Property Table
+
+. property(property_id, host_id, name, location)
+
+# Booking Table
+. booking(booking_id, property_id, user_id, start_date, end_date, total_price, status, created_at)
+
+# Payment Table
+
+.payment(payment_id, booking_id, amount, payment_date, payment_method)
+
+# Review Table
+ .review(review_id, property_id, user_id, comment, rating, created_at)
+
+ # Message Table
+
+ . message(message_id, sender_id, recipient_id, message_body, sent_at)
