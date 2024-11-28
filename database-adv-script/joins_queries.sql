@@ -13,19 +13,15 @@ INNER JOIN
     User u ON b.user_id = u.user_id;
 
 SELECT
-    py.payment_id,
-    CONCAT(u.first_name, ' ', u.last_name) AS user_name,
+    p.property_id,
     p.name AS property_name,
-    py.amount,
-    py.payment_date,
-    py.payment_method
+    p.location,
+    p.pricepernight,
+    r.review_id,
+    r.rating,
+    r.comment,
+    r.created_at AS review_date
 FROM
-    Payment py
-INNER JOIN
-    Booking b ON py.booking_id = b.booking_id
-INNER JOIN
-    User u ON b.user_id = u.user_id
-INNER JOIN
-    Property p ON b.property_id = p.property_id
-WHERE
-    b.status = 'confirmed';
+    Property p
+LEFT JOIN
+    Review r ON p.property_id = r.property_id;
