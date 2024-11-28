@@ -9,3 +9,8 @@
 . Must satisfy 1NF.
 
 . Eliminate partial dependencies: all non-key attributes must depend on the entire primary key, not part of it
+
+## 3rd Normal Form (3NF)
+. Must satisfy 2NF
+
+. Eliminate transitive dependencies: non-key attributes must depend only on the primary key
