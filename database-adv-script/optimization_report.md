@@ -1,4 +1,4 @@
-SELECT 
+``` SELECT 
     bookings.id AS booking_id,
     users.id AS user_id,
     users.name AS user_name,
@@ -13,4 +13,4 @@ JOIN
 JOIN 
     properties ON bookings.property_id = properties.id
 JOIN 
-    payments ON bookings.payment_id = payments.id;
+    payments ON bookings.payment_id = payments.id; ```
