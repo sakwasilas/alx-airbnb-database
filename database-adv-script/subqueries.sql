@@ -1,13 +1,16 @@
-SELECT 
-    b.booking_id,
-    CONCAT(u.first_name, ' ', u.last_name) AS user_name,
-    u.email AS user_email,
-    b.property_id,
-    b.start_date,
-    b.end_date,
-    b.total_price,
-    b.status
-FROM 
-    Booking b
-INNER JOIN 
-    User u ON b.user_id = u.user_id;
+SELECT property_id, name, description, location, pricepernight, created_at, updated_at
+FROM property p
+WHERE (
+    SELECT AVG(r.rating)
+    FROM ratings r
+    WHERE r.property_id = p.property_id
+) > 4.0;
+
+
+SELECT u.user_id, u.username, u.email
+FROM users u
+WHERE (
+    SELECT COUNT(b.booking_id)
+    FROM bookings b
+    WHERE b.user_id = u.user_id
+) > 3;
