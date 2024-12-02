@@ -1,4 +1,6 @@
 Performance Monitoring
+
+```
 Initial Query with Corrected Attribute Names Based on Schema
 SELECT 
     Bookings.booking_id AS booking_id,
@@ -66,4 +68,4 @@ INNER JOIN
     Payments ON Bookings.booking_id = Payments.booking_id
 WHERE
     Users.user_name LIKE '%john%' AND
-    Payments.amount > 100;
+    Payments.amount > 100; ```
