@@ -1,3 +1,4 @@
 Define Entities and Relationships in ER Diagram
 
-![ERD Diagram](ERD/ER-diagram)
+
+![Entity Relationship Diagram](ER-diagram.png)
