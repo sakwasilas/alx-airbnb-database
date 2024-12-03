@@ -17,3 +17,11 @@
 . property_id
 
 . start date
+
+# property 
+
+### most used column 
+
+. property_id
+
+. locationi
