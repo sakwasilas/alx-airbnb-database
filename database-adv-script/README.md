@@ -1,1 +1,0 @@
-Unleashing Advanced Querying Power
